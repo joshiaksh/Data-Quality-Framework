@@ -1,0 +1,44 @@
+
+--- Data Quality Checks ---
+-- Check for null patient_id in patients table
+SELECT COUNT(*) AS null_patient_id_count
+FROM patients
+WHERE patient_id IS NULL;
+
+-- Check for null diagnosis_date in diagnoses
+SELECT COUNT(*) AS null_diag_date
+FROM diagnoses
+WHERE diagnosis_date IS NULL;
+
+-- Check for duplicates
+SELECT patient_id, COUNT(*) AS dup_count
+FROM patients
+GROUP BY patient_id
+HAVING COUNT(*) > 1;
+
+-- Referential Integrity Check
+SELECT t.patient_id
+FROM treatments t
+LEFT JOIN patients p ON t.patient_id = p.patient_id
+WHERE p.patient_id IS NULL;
+
+
+-- Create flags to address the data quality issues for further analytics
+with data_quality_flags AS
+SELECT 
+    p.patient_id,
+    CASE WHEN p.gender NOT IN ('Male', 'Female') THEN 'Invalid Gender' ELSE NULL END AS gender_issue,
+    CASE WHEN d.icd_code IS NULL THEN 'Missing Diagnosis' ELSE NULL END AS diag_issue
+FROM patients p
+LEFT JOIN diagnoses d ON p.patient_id = d.patient_id
+WHERE p.patient_id IS NOT NULL;
+
+-- Check for valid dates
+SELECT 
+    pd.patient_id,
+    pd.patient_diag_date,
+    pts.first_treatment_date
+FROM diagnoses pd
+JOIN treatments pts
+    ON pd.patient_id = pts.patient_id;
+    where pd.patient_diag_date >  pts.first_treatment_date
