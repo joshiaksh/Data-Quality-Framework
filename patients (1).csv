@@ -1,0 +1,11 @@
+patient_id,first_name,last_name,birth_date,gender,zip_code,race,ethnicity,enrollment_date,prior_conditions
+1,Emma,Johnson,1978-04-12,F,92612,White,Non-Hispanic,2020-01-15,Hypertension;Asthma
+2,Liam,Smith,1955-09-30,M,92614,Black,Hispanic,2018-07-22,Diabetes
+3,Olivia,Williams,1988-12-05,F,92617,Asian,Non-Hispanic,2021-03-10,
+4,Noah,Brown,1970-02-17,M,92618,White,Hispanic,2019-11-05,Hyperlipidemia
+5,Ava,Jones,1995-06-23,F,92619,Other,Non-Hispanic,2022-05-20,Migraine
+6,Elijah,Miller,1950-10-02,M,92620,White,Non-Hispanic,2017-08-14,COPD
+7,Sophia,Davis,1965-07-11,F,92621,Black,Non-Hispanic,2020-12-01,Arthritis
+8,James,Garcia,1982-03-29,M,92623,Hispanic,Hispanic,2021-06-18,Obesity
+9,Isabella,Martinez,1990-11-02,F,92624,Asian,Hispanic,2022-02-25,Depression
+10,William,Rodriguez,2000-01-17,M,92625,White,Non-Hispanic,2023-09-01,Anxiety

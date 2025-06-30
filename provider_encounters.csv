@@ -1,0 +1,11 @@
+patient_id,encounter_date,provider_id,specialty
+P001,2019-04-27,HCP462,Oncologist
+P002,2021-09-27,HCP533,Oncologist
+P003,2018-02-15,HCP520,Oncologist
+P004,2019-04-02,HCP578,Oncologist
+P005,2021-12-17,HCP984,Oncologist
+P006,2020-06-18,HCP846,Oncologist
+P007,2022-03-15,HCP155,Oncologist
+P008,2019-07-04,HCP789,Oncologist
+P009,2018-07-09,HCP769,Oncologist
+P010,2019-12-17,HCP761,Oncologist

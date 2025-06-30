@@ -1,0 +1,11 @@
+encounter_id,patient_id,encounter_date,provider_id,encounter_type,diagnosis_codes,encounter_cost
+1,1,2023-05-10,101,Office Visit,E11.9;J45.909,150.0
+2,2,2022-10-02,102,Hospital Inpatient,I10;E78.5,2000.0
+3,3,2023-01-15,103,Telehealth,F41.9,75.0
+4,4,2021-11-20,101,ER Visit,E78.5;I25.10,500.0
+5,5,2023-08-12,104,Office Visit,G43.909,140.0
+6,6,2020-02-18,105,Home Visit,J44.9,180.0
+7,7,2022-06-07,102,Office Visit,M19.90,130.0
+8,8,2024-03-03,103,Telehealth,E66.9,90.0
+9,9,2023-09-30,104,Office Visit,F32.9,120.0
+10,10,2024-01-10,105,ER Visit,F41.9;I10,600.0

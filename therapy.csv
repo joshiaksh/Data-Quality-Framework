@@ -1,0 +1,11 @@
+patient_id,drug_name,line_of_therapy,start_date,end_date,regimen
+P001,Pembrolizumab,1L,2019-06-16,2020-02-23,Combination
+P002,Rituximab,2L,2021-11-16,2022-05-15,Single Agent
+P003,Rituximab,1L,2018-04-06,2018-12-07,Single Agent
+P004,Docetaxel,2L,2019-05-22,2019-12-16,Single Agent
+P005,Pembrolizumab,1L,2022-02-05,2022-10-28,Single Agent
+P006,Ibrutinib,2L,2020-08-07,2021-06-03,Combination
+P007,Ibrutinib,1L,2022-05-04,2022-10-09,Combination
+P008,Docetaxel,2L,2019-08-23,2020-01-14,Combination
+P009,Pembrolizumab,1L,2018-08-28,2019-01-01,Single Agent
+P010,Pembrolizumab,2L,2020-02-05,2020-11-11,Combination

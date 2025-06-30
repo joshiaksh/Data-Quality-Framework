@@ -1,0 +1,11 @@
+procedure_id,encounter_id,cpt_code,description,procedure_cost
+1,1,99213,Office visit established patient,75.0
+2,2,99223,Initial hospital care,350.0
+3,3,90834,Individual psychotherapy 45 min,130.0
+4,4,99284,ER visit level 4,200.0
+5,5,90834,Individual psychotherapy 45 min,130.0
+6,6,99441,Telephone E/M 5-10 min,40.0
+7,7,99213,Office visit established patient,75.0
+8,8,99441,Telephone E/M 5-10 min,40.0
+9,9,99213,Office visit established patient,75.0
+10,10,99284,ER visit level 4,200.0

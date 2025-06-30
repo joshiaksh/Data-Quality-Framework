@@ -1,0 +1,11 @@
+patient_id,diagnosis_code,diagnosis_desc,diagnosis_date
+P001,C34.90,Lung Cancer,2019-05-17
+P002,C91.10,Prostate Cancer,2021-10-17
+P003,C91.10,Prostate Cancer,2018-03-07
+P004,C91.10,Lung Cancer,2019-04-22
+P005,C34.90,Breast Cancer,2022-01-06
+P006,C91.10,CLL,2020-07-08
+P007,C50.911,Lung Cancer,2022-04-04
+P008,C91.10,Breast Cancer,2019-07-24
+P009,C91.10,Prostate Cancer,2018-07-29
+P010,C34.90,Prostate Cancer,2020-01-06

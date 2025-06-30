@@ -1,0 +1,11 @@
+patient_id,lab_test,result_value,result_unit,result_date
+P001,Hemoglobin,2326,cells/uL,2019-05-07
+P002,Platelets,7803,cells/uL,2021-10-07
+P003,Hemoglobin,15911,cells/uL,2018-02-25
+P004,WBC Count,17674,cells/uL,2019-04-12
+P005,WBC Count,18716,cells/uL,2021-12-27
+P006,Platelets,15493,cells/uL,2020-06-28
+P007,WBC Count,15503,cells/uL,2022-03-25
+P008,Hemoglobin,6244,cells/uL,2019-07-14
+P009,WBC Count,3181,cells/uL,2018-07-19
+P010,Platelets,14129,cells/uL,2019-12-27
