@@ -43,6 +43,20 @@ JOIN treatments pts
     where pd.patient_diag_date >  pts.first_treatment_date
 
 
+-- Check for time to first fill
+SELECT patient_id,
+    days_supply,
+    datediff(day,first_fill_date, enrollment_date) as time_to_first_fill
+    (SELECT 
+    pd.patient_id,
+    pts.days_supply,
+    pd.enrollment_date,
+    min(pts.fill_date)over (partition by pd.patient_id) as first_fill_date
+FROM patients pd
+JOIN prescriptions pts
+    ON pd.patient_id = pts.patient_id);
+
+
 
 ---- PL/SQL Procedure for data validation ----
 CREATE OR REPLACE procedure validate_queries()
