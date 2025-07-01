@@ -27,7 +27,6 @@ WHERE p.patient_id IS NULL;
 with data_quality_flags AS
 SELECT 
     p.patient_id,
-    CASE WHEN p.gender NOT IN ('Male', 'Female') THEN 'Invalid Gender' ELSE NULL END AS gender_issue,
     CASE WHEN d.icd_code IS NULL THEN 'Missing Diagnosis' ELSE NULL END AS diag_issue
 FROM patients p
 LEFT JOIN diagnoses d ON p.patient_id = d.patient_id
