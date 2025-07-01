@@ -42,3 +42,43 @@ FROM diagnoses pd
 JOIN treatments pts
     ON pd.patient_id = pts.patient_id;
     where pd.patient_diag_date >  pts.first_treatment_date
+
+
+
+---- PL/SQL Procedure for data validation ----
+CREATE OR REPLACE procedure validate_queries()
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    validation_id INT;
+    source_query TEXT;
+    target_query TEXT;
+    source_result INT;
+    target_result INT;
+    validation_status TEXT;
+BEGIN
+    -- Cursor to loop through each validation query
+    FOR validation_id, source_query, target_query IN
+        SELECT id, source_query, target_query
+        FROM validation_queries
+    LOOP
+        -- Execute source query and get result
+        EXECUTE source_query INTO source_result;
+        
+        -- Execute target query and get result
+        EXECUTE target_query INTO target_result;
+        
+        -- Compare results and determine status
+        IF source_result = target_result THEN
+            validation_status := 'PASS';
+        ELSE
+            validation_status := 'FAIL';
+        END IF;
+        
+        -- Insert the validation result into log table
+        INSERT INTO validation_log (validation_id, status)
+        VALUES (validation_id, validation_status);
+    END LOOP;
+END;
+$$;
+
